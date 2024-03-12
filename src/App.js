@@ -1,9 +1,11 @@
 import './App.css';
 import { useEffect } from 'react'; // Добавляем импорт useEffect из React
 
-const tg = window.Telegram.WebApp;
+import { useTelegram } from './hooks/useTelegram';
+
 
 function App() {
+  const {onToggleButton, tg} = useTelegram();
 
   useEffect(() => {
     tg.ready();  // сообщает что приложение проинициализировано, можно отрисовывать
@@ -11,7 +13,7 @@ function App() {
 
   return (
     <div className="App">
-      work
+      <button onClick={onToggleButton}>toggle</button>
     </div>
   );
 }
