@@ -1,6 +1,8 @@
 import './App.css';
 import { useEffect } from 'react'; // Добавляем импорт useEffect из React
 
+const tg = window.Telegram.WebApp;
+
 function App() {
 
   useEffect(() => {
